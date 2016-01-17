@@ -1,6 +1,6 @@
 # DPSimpleLoading
 
-It's a very basic loading in iOS. And absolutely it's a very lightwight library.
+It's a very basic loading in iOS. And absolutely it's a very lightweight library.
 Inspired from progress loading in App Store.
 
 ## Usage
@@ -25,7 +25,7 @@ Will be here soon!
 
 ## Installation
 
-Manual installation. Just copy DPImageGenerator folder to your project.
+Manual installation. Just copy DPSimpleLoading folder to your project.
 Will be available on cocoapods soon.
 
 ## Thanks To

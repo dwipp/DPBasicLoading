@@ -22,7 +22,7 @@ class DPSimpleLoading: UIView {
     private let centerView: UIView = UIView()
     private let label = UILabel()
     
-    override init(frame: CGRect) {
+    private override init(frame: CGRect) {
         super.init(frame: frame)
         
     }
@@ -32,25 +32,31 @@ class DPSimpleLoading: UIView {
         
     }
     
-    convenience init(view:UIView){
-        self.init(frame: view.frame)
-        
+    convenience init(table:UITableView){
+        self.init(frame: table.frame)
+        table.backgroundView=self
     }
     
-    convenience init(table:UITableView){ // position:positions
+    convenience init(table:UITableView, fontName:String){ // position:positions
         self.init(frame: table.frame)
         
         /*switch (position){
         case .center:
             
         }*/
-        
+        label.font = UIFont(name: fontName, size: 17)
         table.backgroundView=self
     }
     
     
     convenience init(collection:UICollectionView) {
         self.init(frame: collection.frame)
+        collection.backgroundView=self
+    }
+    
+    convenience init(collection:UICollectionView, fontName:String) {
+        self.init(frame: collection.frame)
+        label.font = UIFont(name: fontName, size: 17)
         collection.backgroundView=self
     }
     

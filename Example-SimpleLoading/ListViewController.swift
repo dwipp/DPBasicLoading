@@ -21,12 +21,11 @@ class ListViewController: UIViewController {
         self.title = selectedLoading!
         
         
-        let loading = DPSimpleLoading(table: table_view)
+        let loading = DPSimpleLoading(table: table_view, fontName: "HelveticaNeue")
         loading.startLoading("Loading...")
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(3 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
             self.data_array = ["One", "Two", "Three", "Four"]
             self.table_view.reloadData()
-            
             loading.endLoading()
         }
         
