@@ -3,6 +3,8 @@
 It's a very basic loading in iOS. And absolutely it's a very lightweight library.
 Inspired from progress loading in App Store.
 
+It works for UITableView & UIColelctionView.
+
 ## Usage
 
 ``` swift
