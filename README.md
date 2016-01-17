@@ -21,8 +21,6 @@ loading.endLoading()
 
 ## Sample
 
-![Screenshot](http://s9.postimg.org/vt58qhjzz/i_OSdwipp01172016152524.png)
-![Screenshot](http://s15.postimg.org/imyobac8b/i_OSdwipp01172016152451.png)
 ![gif](http://i.giphy.com/3o7rbUkqcG4xLKwnqo.gif)
 
 ## Installation
