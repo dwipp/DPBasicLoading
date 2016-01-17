@@ -1,24 +1,14 @@
 //
-//  DPSimpleLoading.swift
-//  Example-SimpleLoading
+//  DPBasicLoading.swift
+//  BasicLoading
 //
-//  Created by Dwi Putra on 1/15/16.
+//  Created by Dwi Putra on 1/17/16.
 //  Copyright © 2016 dwipp. All rights reserved.
 //
 
 import UIKit
 
-class DPSimpleLoading: UIView {
-    
-    enum positions {
-        case center
-        case topLeft
-        case topRight
-        case bottomLeft
-        case bottomRight
-    }
-    
-    
+class DPBasicLoading: UIView {
     private let centerView: UIView = UIView()
     private let label = UILabel()
     
@@ -34,38 +24,35 @@ class DPSimpleLoading: UIView {
     
     convenience init(table:UITableView){
         self.init(frame: table.frame)
+        label.font = UIFont.systemFontOfSize(14)
         table.backgroundView=self
+        table.tableFooterView = UIView()
     }
     
-    convenience init(table:UITableView, fontName:String){ // position:positions
+    convenience init(table:UITableView, fontName:String){
         self.init(frame: table.frame)
-        
-        /*switch (position){
-        case .center:
-            
-        }*/
-        label.font = UIFont(name: fontName, size: 17)
+        label.font = UIFont(name: fontName, size: 14)
         table.backgroundView=self
+        table.tableFooterView = UIView()
     }
     
     
     convenience init(collection:UICollectionView) {
         self.init(frame: collection.frame)
+        label.font = UIFont.systemFontOfSize(14)
         collection.backgroundView=self
     }
     
     convenience init(collection:UICollectionView, fontName:String) {
         self.init(frame: collection.frame)
-        label.font = UIFont(name: fontName, size: 17)
+        label.font = UIFont(name: fontName, size: 14)
         collection.backgroundView=self
     }
     
     private func setupView(){
         backgroundColor = UIColor.clearColor()
         centerView.backgroundColor = UIColor.clearColor()
-        
         centerView.translatesAutoresizingMaskIntoConstraints = false
-        
         self.addSubview(centerView)
         
         let views = ["centerView": centerView, "superview": self]
@@ -79,14 +66,13 @@ class DPSimpleLoading: UIView {
             views: views)
         self.addConstraints(vConstraints)
         self.addConstraints(hConstraints)
-        
     }
     
     private func setupLoading(text:String){
-        
         label.text = text
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = UIColor.clearColor()
+        label.textColor = UIColor.grayColor()
         centerView.addSubview(label)
         
         let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
@@ -108,15 +94,11 @@ class DPSimpleLoading: UIView {
     func startLoading(text:String){
         setupView()
         setupLoading(text)
-        
     }
     
     
     func endLoading(){
         centerView.removeFromSuperview()
         self.removeFromSuperview()
-        
     }
-    
-    
 }

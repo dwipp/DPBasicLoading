@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Example-SimpleLoading
+//  BasicLoading
 //
-//  Created by Dwi Putra on 1/15/16.
+//  Created by Dwi Putra on 1/17/16.
 //  Copyright © 2016 dwipp. All rights reserved.
 //
 
